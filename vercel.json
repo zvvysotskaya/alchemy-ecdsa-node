@@ -1,17 +1,9 @@
+
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "server/index.js",
-      "use": "@now/node"
-    }
-  ],
-  "routes": [
-    {
-      // Specify which paths will route to a destination using a regex
-      "src": "/(.*)",
-      
-      "dest": "server/index.js"
+      "source": "/server/(.*)",
+      "destination": "/server"
     }
   ]
 }
