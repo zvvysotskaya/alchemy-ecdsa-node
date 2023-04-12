@@ -34,7 +34,7 @@ app.post("/send", (req, res) => {
     const { sender, recipient, amount, signature, messageHash } = req.body;
 
     const isSigned = secp.verify(signature, messageHash, sender);
-    console.log('signed? ', isSigned)
+  //  console.log('signed? ', isSigned)
     setInitialBalance(sender);
     setInitialBalance(recipient);
 
@@ -61,7 +61,8 @@ function setInitialBalance(address) {
         balances[address] = 0;
     }
 }
-
+///aded module export for vercel
+module.exports = app;
 
 
 
